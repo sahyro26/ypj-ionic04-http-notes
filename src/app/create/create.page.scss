@@ -1,0 +1,25 @@
+ion-content {
+    --background: transparent; /* Optional: Customize background */
+  }
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    height: 100%; /* Ensure it takes up the full height of ion-content */
+    padding: 0 20px; /* Add padding if needed */
+  }
+  
+  ion-item {
+    width: 100%; /* Make ion-items take the full width of the container */
+  }
+  
+  form {
+    width: 100%;
+    max-width: 600px; /* Optional: Limit the form's maximum width */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visual */
+    padding: 20px; /* Optional: Add padding inside the form */
+  }

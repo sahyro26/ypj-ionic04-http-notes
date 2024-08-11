@@ -1,0 +1,72 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>update</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">update</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-item>
+    <ion-input label="Id" placeholder="Enter id" [(ngModel)]="bookingId"></ion-input>
+    <!-- <ion-button (click)="readPressed()">Get booking</ion-button> -->
+  </ion-item>
+
+  <div class="form-container" *ngIf="booking">
+    <ion-item>
+      <ion-input label="Name" labelPlacement="floating" placeholder="Enter name" [(ngModel)]="booking.name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Email" labelPlacement="floating" placeholder="Enter email" [(ngModel)]="booking.email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-textarea label="Address" labelPlacement="floating" placeholder="Enter address" [(ngModel)]="booking.address"></ion-textarea>
+    </ion-item>
+    <!-- <ion-item>
+      <ion-label>Pick up date and time</ion-label>
+      <ion-datetime-button datetime="pickupdatetime"></ion-datetime-button>
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime id="pickupdatetime" [(ngModel)]="booking.pickup"></ion-datetime>
+        </ng-template>
+      </ion-modal>
+    </ion-item> -->
+    <!-- <ion-item>
+      <ion-label>Sent date and time</ion-label>
+      <ion-datetime-button datetime="sentdatetime"></ion-datetime-button>
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime id="sentdatetime" [(ngModel)]="booking.sent"></ion-datetime>
+        </ng-template>
+      </ion-modal>
+    </ion-item> -->
+    <ion-item>
+      <ion-input label="Pickup time" labelPlacement="floating" placeholder="Enter pickuptime" [(ngModel)]="booking.pickup"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Sent time" labelPlacement="floating" placeholder="Enter sent time" [(ngModel)]="booking.sent"></ion-input>
+    </ion-item>
+   
+    <ion-item>
+      <ion-select label="Car label" label-placement="fixed" placeholder="Car Model" [(ngModel)]="booking.motor">
+        <ion-select-option value="axia">Proton Axia</ion-select-option>
+        <ion-select-option value="myvi">Perodua Myvi</ion-select-option>
+        <ion-select-option value="bezza">Perodua Bezza</ion-select-option>
+        <ion-select-option value="ativa">Perodua Ativa</ion-select-option>
+        <ion-select-option value="aruz">Perodua Aruz</ion-select-option>
+        <ion-select-option value="saga">Proton Saga</ion-select-option>
+        <ion-select-option value="iriz">Proton Iriz</ion-select-option>
+        <ion-select-option value="persona">Proton Persona</ion-select-option>
+        <ion-select-option value="x50">Proton X50</ion-select-option>
+        <ion-select-option value="s70">Proton S70</ion-select-option>
+        <ion-select-option value="x70">Proton X70</ion-select-option>
+        <ion-select-option value="x90">Proton X90</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-button expand="block" (click)="updateBooking()">Update</ion-button>
+ 
+  </div>
+</ion-content>
